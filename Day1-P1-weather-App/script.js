@@ -34,9 +34,14 @@ else if(data.weather[0].main=="Snow"){
 else if(data.weather[0].main=="Mist"){
     img.src='images/mist.png'
 }
-
-
 }
+
+window.addEventListener("keydown",function(e){
+    if(e.keyCode ===13){
+        e.preventDefault();
+    checkwheather(input.value)
+    }
+})
 
 button.addEventListener('click',function(e){
     e.preventDefault();
